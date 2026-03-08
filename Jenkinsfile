@@ -4,6 +4,10 @@ pipeline {
     tools {
         maven 'maven3'
         }
+    options {
+        buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '3')
+        }
+
 
     stages {
         stage('Build') {
@@ -14,8 +18,10 @@ pipeline {
 
         stage('Upload War To Nexus') {
             steps {
-                nexusArtifactUploader artifacts: [
-                    [
+                script{
+                    def mavenPom = readMavenPom file: 'pom.xml'
+                    def nexusRepoName = mavenPom.version.endsWith("SNAPSHOT") ? "maven-app1-snapshots" : "maven-app1-releases"
+                    nexusArtifactUploader artifacts: [[
                         artifactId: 'maven-app1', 
                         classifier: '', 
                         file: 'target/maven-app1-1.0.0.war', 
@@ -25,8 +31,10 @@ pipeline {
                         nexusUrl: 'nexus:8081', 
                         nexusVersion: 'nexus3', 
                         protocol: 'http', 
-                        repository: 'maven-app1-releases', 
-                        version: '1.0.0'
+                        repository: nexusRepoName, 
+                        version: "${mavenPom.version}"
+
+                } 
             }
         }
     }
