@@ -157,4 +157,12 @@ Nexus   → http://localhost:8081
 - **Why Docker network?** Containers on the same network communicate by name. Jenkins reaches Nexus via `nexus:8081` not `localhost:8081` because localhost inside a container means the container itself.
 - **Why two Nexus repos?** To protect production. Snapshot artifacts change constantly during development. Release artifacts are locked forever. Mixing them risks overwriting a stable production version with a broken dev build.
 - **Why build discarder?** Every build consumes disk space. Without cleanup Jenkins disk fills up and the team cannot deploy. Keeping only the last 3 builds is standard practice.
-- **Why read pom.xml dynamically?** Hardcoding version numbers in Jenkinsfile means updating two files every release. Reading from pom.xml means one change propagates everywhere automatically.
+- **Why read pom.xml dynamically?** Hardcoding version numbers in Jenkinsfile means updating two files every release. Reading from pom.xml means one change propagates every
+
+<img width="1871" height="865" alt="لقطة شاشة 2026-03-08 095514" src="https://github.com/user-attachments/assets/70e03b1a-8651-479d-8f52-d1eb94259c9a" />
+<img width="916" height="452" alt="لقطة شاشة 2026-03-08 090847" src="https://github.com/user-attachments/assets/4ea63802-5844-424a-9b6b-1edebe00e7ed" />
+
+<img width="1860" height="885" alt="لقطة شاشة 2026-03-08 221743" src="https://github.com/user-attachments/assets/066e76ef-1ccc-46be-80c2-8af27e2040a4" />
+<img width="1838" height="794" alt="لقطة شاشة 2026-03-08 170039" src="https://github.com/user-attachments/assets/c4e76db4-74d5-42cc-b98d-960fbbe8c2fd" />
+
+<img width="655" height="363" alt="لقطة شاشة 2026-03-08 085953" src="https://github.com/user-attachments/assets/f79350aa-517b-4fa2-9217-15f43429da0f" />
