@@ -161,8 +161,6 @@ Nexus   → http://localhost:8081
 
 <img width="1871" height="865" alt="لقطة شاشة 2026-03-08 095514" src="https://github.com/user-attachments/assets/70e03b1a-8651-479d-8f52-d1eb94259c9a" />
 <img width="916" height="452" alt="لقطة شاشة 2026-03-08 090847" src="https://github.com/user-attachments/assets/4ea63802-5844-424a-9b6b-1edebe00e7ed" />
-
-<img width="1860" height="885" alt="لقطة شاشة 2026-03-08 221743" src="https://github.com/user-attachments/assets/066e76ef-1ccc-46be-80c2-8af27e2040a4" />
 <img width="1838" height="794" alt="لقطة شاشة 2026-03-08 170039" src="https://github.com/user-attachments/assets/c4e76db4-74d5-42cc-b98d-960fbbe8c2fd" />
-
+<img width="1860" height="885" alt="لقطة شاشة 2026-03-08 221743" src="https://github.com/user-attachments/assets/066e76ef-1ccc-46be-80c2-8af27e2040a4" />
 <img width="655" height="363" alt="لقطة شاشة 2026-03-08 085953" src="https://github.com/user-attachments/assets/f79350aa-517b-4fa2-9217-15f43429da0f" />
