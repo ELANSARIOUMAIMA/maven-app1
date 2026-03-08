@@ -24,7 +24,7 @@ pipeline {
                     nexusArtifactUploader artifacts: [[
                         artifactId: 'maven-app1', 
                         classifier: '', 
-                        file: 'target/maven-app1-1.0.0.war', 
+                        file: "target/maven-app1-${mavenPom.version}.war", 
                         type: 'war']], 
                         credentialsId: 'nexus-credentials', 
                         groupId: 'in.javahome', 
